@@ -1,0 +1,24 @@
+---
+name: intro-to-networking
+prefix: ""
+
+mgmt:
+  network: statics
+  ipv4-subnet: 172.10.10.0/24
+
+topology:
+  kinds:
+    ceos:
+      image: ceos:latest
+  nodes:
+    r1:
+      kind: ceos
+      mgmt-ipv4: 172.10.10.11
+      startup-config: startup/r1.cfg
+    r2:
+      kind: ceos
+      mgmt-ipv4: 172.10.10.12
+      startup-config: startup/r2.cfg
+
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]

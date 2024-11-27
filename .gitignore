@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# CLAB stuff
+.topo.yml.bak
+clab-intro-to-networking/
+
 # C extensions
 *.so
 
